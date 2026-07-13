@@ -367,54 +367,57 @@
           <span class="section-title-num">05 //</span> Contact
         </h2>
         
-        <!-- Interactive Terminal Shell Easter Egg -->
-        <div class="terminal-shell-container reveal" style="width: 100%; max-width: 800px; margin: 0 auto 4rem auto;">
-          <div class="terminal-log-container">
-            <div class="terminal-log-header">
-              <span class="terminal-log-dot red"></span>
-              <span class="terminal-log-dot yellow"></span>
-              <span class="terminal-log-dot green"></span>
-              <span class="terminal-log-title">interactive_shell.sh</span>
-            </div>
-            <div class="terminal-log-body" id="shell-body" style="min-height: 200px; max-height: 280px; overflow-y: auto; font-size: 0.8rem;">
-              <div id="terminal-history" style="white-space: pre-wrap; margin-bottom: 0.5rem; line-height: 1.4; color: var(--text-secondary);">Welcome to drumil.dev interactive systems trace.
-Type 'help' to see active session commands.</div>
-              <div class="terminal-input-line" style="display: flex; align-items: center;">
-                <span style="color: var(--accent); margin-right: 0.5rem; font-weight: bold;">guest@drumil.dev:~$</span>
-                <input type="text" id="terminal-input" style="flex: 1; background: transparent; border: none; outline: none; color: var(--text-primary); font-family: var(--font-mono); font-size: 0.8rem;" autocomplete="off" placeholder="type 'help'..."></input>
-              </div>
+        <div class="two-column-grid contact-grid">
+          <!-- Left Column: Communication Info -->
+          <div class="contact-info-block reveal">
+            <span class="contact-hint">Interested in scalable infrastructure?</span>
+            <a href="mailto:drumilbhati5@gmail.com" class="contact-email-link">
+              drumilbhati5<span class="accent-email">@</span>gmail.com
+            </a>
+            
+            <div class="contact-social-list">
+              <a href="https://github.com/drumilbhati" target="_blank" rel="noopener noreferrer" class="contact-social-item">
+                <span class="social-icon">&lt;&gt;</span> GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/drumil-bhati/" target="_blank" rel="noopener noreferrer" class="contact-social-item">
+                <span class="social-icon">in</span> LinkedIn
+              </a>
+              <a href="https://leetcode.com/u/drumilbhati/" target="_blank" rel="noopener noreferrer" class="contact-social-item">
+                <span class="social-icon">[]</span> LeetCode
+              </a>
+              <a href="https://codeforces.com/profile/Drumil" target="_blank" rel="noopener noreferrer" class="contact-social-item">
+                <span class="social-icon">cf</span> Codeforces
+              </a>
+              <a href="https://www.codechef.com/users/drumilbhati" target="_blank" rel="noopener noreferrer" class="contact-social-item">
+                <span class="social-icon">cc</span> CodeChef
+              </a>
+              <a href="https://atcoder.jp/users/DrumilBhati" target="_blank" rel="noopener noreferrer" class="contact-social-item">
+                <span class="social-icon">ac</span> AtCoder
+              </a>
+              <a href="https://drive.google.com/file/d/1IPMcJAx50Jo2XJaRMzm3qIi3LbqVGJyf/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="contact-social-item">
+                <span class="social-icon">pdf</span> Resume
+              </a>
             </div>
           </div>
-        </div>
 
-        <div class="contact-content reveal" style="margin-top: 1rem;">
-          <span class="contact-hint">Interested in scalable infrastructure?</span>
-          <a href="mailto:drumilbhati5@gmail.com" class="big-email-link">
-            drumilbhati5<span class="accent-email">@</span>gmail.com
-          </a>
-          
-          <div class="social-links">
-            <a href="https://github.com/drumilbhati" target="_blank" rel="noopener noreferrer" class="social-link">
-              <span class="social-icon">&lt;&gt;</span> GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/drumil-bhati/" target="_blank" rel="noopener noreferrer" class="social-link">
-              <span class="social-icon">in</span> LinkedIn
-            </a>
-            <a href="https://leetcode.com/u/drumilbhati/" target="_blank" rel="noopener noreferrer" class="social-link">
-              <span class="social-icon">[]</span> LeetCode
-            </a>
-            <a href="https://codeforces.com/profile/Drumil" target="_blank" rel="noopener noreferrer" class="social-link">
-              <span class="social-icon">cf</span> Codeforces
-            </a>
-            <a href="https://www.codechef.com/users/drumilbhati" target="_blank" rel="noopener noreferrer" class="social-link">
-              <span class="social-icon">cc</span> CodeChef
-            </a>
-            <a href="https://atcoder.jp/users/DrumilBhati" target="_blank" rel="noopener noreferrer" class="social-link">
-              <span class="social-icon">ac</span> AtCoder
-            </a>
-            <a href="https://drive.google.com/file/d/1IPMcJAx50Jo2XJaRMzm3qIi3LbqVGJyf/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="social-link">
-              <span class="social-icon">pdf</span> Resume
-            </a>
+          <!-- Right Column: Interactive Terminal -->
+          <div class="terminal-shell-container reveal">
+            <div class="terminal-log-container" style="margin-bottom: 0;">
+              <div class="terminal-log-header">
+                <span class="terminal-log-dot red"></span>
+                <span class="terminal-log-dot yellow"></span>
+                <span class="terminal-log-dot green"></span>
+                <span class="terminal-log-title">interactive_shell.sh</span>
+              </div>
+              <div class="terminal-log-body" id="shell-body" style="min-height: 220px; max-height: 250px; overflow-y: auto; font-size: 0.8rem; padding: 1.25rem;">
+                <div id="terminal-history" style="white-space: pre-wrap; margin-bottom: 0.5rem; line-height: 1.4; color: var(--text-secondary);">Welcome to drumil.dev interactive systems trace.
+Type 'help' to see active session commands.</div>
+                <div class="terminal-input-line" style="display: flex; align-items: center;">
+                  <span style="color: var(--accent); margin-right: 0.5rem; font-weight: bold;">guest@drumil.dev:~$</span>
+                  <input type="text" id="terminal-input" style="flex: 1; background: transparent; border: none; outline: none; color: var(--text-primary); font-family: var(--font-mono); font-size: 0.8rem;" autocomplete="off" placeholder="type 'help'..."></input>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

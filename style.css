@@ -1225,3 +1225,77 @@ h1, h2, h3, h4 {
   color: var(--text-muted);
   opacity: 0.5;
 }
+
+/* ==========================================================================
+   CONTACT SECTION 2-COLUMN GRID STYLING
+   ========================================================================== */
+.contact-grid {
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-info-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-hint {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.8rem;
+}
+
+.contact-email-link {
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transition: var(--transition-smooth);
+  width: fit-content;
+  border-bottom: 1px solid transparent;
+}
+
+.contact-email-link:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.contact-social-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.contact-social-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.contact-social-item:hover {
+  color: var(--text-primary);
+  transform: translateX(3px);
+}
+
+.contact-social-item .social-icon {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
