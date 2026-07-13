@@ -395,8 +395,30 @@ h1, h2, h3, h4 {
 
 .project-item-main {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   margin-bottom: 0.5rem;
+}
+
+.project-git-icon {
+  margin-left: auto;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  padding: 0.4rem;
+  z-index: 10;
+}
+
+.project-git-icon:hover {
+  color: var(--accent);
+  transform: scale(1.15);
+}
+
+.git-icon-svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 .project-num {

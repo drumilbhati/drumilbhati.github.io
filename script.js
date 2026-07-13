@@ -180,6 +180,14 @@ function initConsoleSimulator() {
     });
   });
 
+  // Intercept GitHub link clicks to stop parent item selection triggers
+  const gitIcons = document.querySelectorAll('.project-git-icon');
+  gitIcons.forEach(icon => {
+    icon.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  });
+
   // Restore active project console on leaving list
   if (projectList) {
     projectList.addEventListener('mouseleave', () => {
