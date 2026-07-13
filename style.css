@@ -606,7 +606,7 @@ h1, h2, h3, h4 {
 .grid-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border);
-  padding: 3rem;
+  padding: 2.5rem;
   border-radius: 6px;
   position: relative;
   transition: var(--transition-smooth);
@@ -647,7 +647,9 @@ h1, h2, h3, h4 {
 }
 
 .card-heading {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
 }
 
@@ -704,7 +706,7 @@ h1, h2, h3, h4 {
 
 .arsenal-category {
   font-family: var(--font-sans);
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   font-weight: 600;
   margin-bottom: 2rem;
   padding-bottom: 0.75rem;
@@ -1015,6 +1017,8 @@ h1, h2, h3, h4 {
   text-decoration: none;
   color: var(--text-secondary);
   transition: var(--transition-fast);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
 }
 
 .telemetry-item:hover {
