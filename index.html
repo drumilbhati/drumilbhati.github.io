@@ -367,7 +367,27 @@
           <span class="section-title-num">05 //</span> Contact
         </h2>
         
-        <div class="contact-content reveal">
+        <!-- Interactive Terminal Shell Easter Egg -->
+        <div class="terminal-shell-container reveal" style="width: 100%; max-width: 800px; margin: 0 auto 4rem auto;">
+          <div class="terminal-log-container">
+            <div class="terminal-log-header">
+              <span class="terminal-log-dot red"></span>
+              <span class="terminal-log-dot yellow"></span>
+              <span class="terminal-log-dot green"></span>
+              <span class="terminal-log-title">interactive_shell.sh</span>
+            </div>
+            <div class="terminal-log-body" id="shell-body" style="min-height: 200px; max-height: 280px; overflow-y: auto; font-size: 0.8rem;">
+              <div id="terminal-history" style="white-space: pre-wrap; margin-bottom: 0.5rem; line-height: 1.4; color: var(--text-secondary);">Welcome to drumil.dev interactive systems trace.
+Type 'help' to see active session commands.</div>
+              <div class="terminal-input-line" style="display: flex; align-items: center;">
+                <span style="color: var(--accent); margin-right: 0.5rem; font-weight: bold;">guest@drumil.dev:~$</span>
+                <input type="text" id="terminal-input" style="flex: 1; background: transparent; border: none; outline: none; color: var(--text-primary); font-family: var(--font-mono); font-size: 0.8rem;" autocomplete="off" placeholder="type 'help'..."></input>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-content reveal" style="margin-top: 1rem;">
           <span class="contact-hint">Interested in scalable infrastructure?</span>
           <a href="mailto:drumilbhati5@gmail.com" class="big-email-link">
             drumilbhati5<span class="accent-email">@</span>gmail.com
@@ -395,26 +415,6 @@
             <a href="https://drive.google.com/file/d/1IPMcJAx50Jo2XJaRMzm3qIi3LbqVGJyf/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="social-link">
               <span class="social-icon">pdf</span> Resume
             </a>
-          </div>
-        </div>
-
-        <!-- Interactive Terminal Shell Easter Egg -->
-        <div class="terminal-shell-container reveal" style="width: 100%; max-width: 800px; margin: 4rem auto 2rem auto;">
-          <div class="terminal-log-container">
-            <div class="terminal-log-header">
-              <span class="terminal-log-dot red"></span>
-              <span class="terminal-log-dot yellow"></span>
-              <span class="terminal-log-dot green"></span>
-              <span class="terminal-log-title">interactive_shell.sh</span>
-            </div>
-            <div class="terminal-log-body" id="shell-body" style="min-height: 200px; max-height: 280px; overflow-y: auto; font-size: 0.8rem;">
-              <div id="terminal-history" style="white-space: pre-wrap; margin-bottom: 0.5rem; line-height: 1.4; color: var(--text-secondary);">Welcome to drumil.dev interactive systems trace.
-Type 'help' to see active session commands.</div>
-              <div class="terminal-input-line" style="display: flex; align-items: center;">
-                <span style="color: var(--accent); margin-right: 0.5rem; font-weight: bold;">guest@drumil.dev:~$</span>
-                <input type="text" id="terminal-input" style="flex: 1; background: transparent; border: none; outline: none; color: var(--text-primary); font-family: var(--font-mono); font-size: 0.8rem;" autocomplete="off" placeholder="type 'help'..."></input>
-              </div>
-            </div>
           </div>
         </div>
 
