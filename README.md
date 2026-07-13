@@ -60,7 +60,7 @@ I actively solve algorithmic challenges to benchmark my constraint logic and opt
 *   Applied a backpressure flow algorithm to adjust traffic light phase configurations in real time, increasing baseline vehicle throughput by **24%**.
 
 #### 🔌 [NetPack](https://github.com/drumilbhati/NetPack) — Network Packet Analyzer
-*   **Tech Stack:** C++ / TCP Socket Layer
+*   **Tech Stack:** Python
 *   A low-level system utility for capturing, parsing, and analyzing TCP/IP packets directly on network interfaces.
 
 #### 💾 [BackupDB](https://github.com/drumilbhati/BackupDB) — Database Backup Sync Tool
