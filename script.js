@@ -55,6 +55,7 @@ const projectData = {
   secureorder: {
     title: "secureorder_seq.log",
     lang: "go",
+    desc: "Distributed MEV protection layer built with a 5-node Raft consensus cluster in Go & C++, sustaining 3,000+ RPS with sub-12ms p99 latency to prevent transaction front-running.",
     stats: [
       { label: "Consensus", val: "Raft (5-Node AWS Cluster)" },
       { label: "Throughput", val: "3150 RPS (Sustained)" },
@@ -83,6 +84,7 @@ const projectData = {
   swarm: {
     title: "swarm_coordinator.log",
     lang: "go",
+    desc: "Resource-aware distributed task execution engine using a 2D Quadtree spatial index (O(log N) pruning) for capacity-based container matchmaking without OOM crashes, achieving 570µs latency at 1M tasks.",
     stats: [
       { label: "Engine Type", val: "Capacity-Aware Work Stealing" },
       { label: "Spatial Index", val: "2D Spatial Quadtree (CPU x RAM)" },
@@ -111,6 +113,7 @@ const projectData = {
   tablingtime: {
     title: "tabling_time_solver.conf",
     lang: "nodejs",
+    desc: "University course scheduling engine powering 2,000+ students and 180 courses, leveraging a backtracking Greedy Constraint Satisfaction (CSP) algorithm to reduce admin planning time from 15 hours to 3 minutes.",
     stats: [
       { label: "Engine Type", val: "Greedy CSP (Backtracking)" },
       { label: "Capacity", val: "2000+ Students, 180 Courses" },
@@ -139,6 +142,7 @@ const projectData = {
   trafficlights: {
     title: "urban_traffic_sim.py",
     lang: "python",
+    desc: "Complex network traffic simulator using OpenStreetMap APIs, NetworkX graph modeling, and a dynamic backpressure phase algorithm to boost vehicle flow by +24% across 4 global metropolitan cities.",
     stats: [
       { label: "Network Graph", val: "NetworkX / OpenStreetMap API" },
       { label: "Optimization", val: "Dynamic Phase Control" },
@@ -243,6 +247,20 @@ function renderConsoleData(projectId) {
   // Generate body structure
   const body = document.getElementById('consoleBody');
   body.innerHTML = '';
+
+  // 0. Overview / Description Section
+  if (data.desc) {
+    const overviewTitle = document.createElement('span');
+    overviewTitle.className = 'console-section-title';
+    overviewTitle.textContent = `// PROJECT OVERVIEW`;
+    body.appendChild(overviewTitle);
+
+    const overviewDesc = document.createElement('p');
+    overviewDesc.className = 'console-overview-desc';
+    overviewDesc.style.cssText = 'color: var(--text-secondary); font-size: 0.82rem; line-height: 1.45; margin-bottom: 1.25rem; font-family: var(--font-mono); font-weight: 400;';
+    overviewDesc.textContent = data.desc;
+    body.appendChild(overviewDesc);
+  }
 
   // 1. Stats Title
   const statsTitle = document.createElement('span');
@@ -524,18 +542,81 @@ function initInteractiveShell() {
         case 'help':
           output.innerHTML = 
 `Available commands:
-  <span style="color: var(--accent);">help</span>           - Display active session commands
-  <span style="color: var(--accent);">about</span>          - Print short background profile
-  <span style="color: var(--accent);">ls</span>             - List files in current namespace
-  <span style="color: var(--accent);">cat resume.txt</span> - Download/Open PDF resume
-  <span style="color: var(--accent);">sudo</span>           - Run administrative command
-  <span style="color: var(--accent);">clear</span>          - Clear shell screen`;
+  <span style="color: var(--accent);">help</span>                 - Display active session commands
+  <span style="color: var(--accent);">about</span>                - Print short background profile
+  <span style="color: var(--accent);">ls [dir]</span>             - List files in current namespace
+  <span style="color: var(--accent);">swarm</span>                - Inspect Swarm distributed task engine
+  <span style="color: var(--accent);">secureorder</span>          - Inspect SecureOrder Raft consensus engine
+  <span style="color: var(--accent);">tablingtime</span>          - Inspect TablingTime CSP solver engine
+  <span style="color: var(--accent);">trafficlights</span>        - Inspect Urban Traffic Light simulator
+  <span style="color: var(--accent);">cat &lt;file&gt;</span>            - View file content (e.g. 'cat projects/swarm')
+  <span style="color: var(--accent);">cat resume.txt</span>       - Open PDF resume
+  <span style="color: var(--accent);">clear</span>                - Clear shell screen`;
           break;
         case 'about':
-          output.innerHTML = `Drumil Bhati — Backend & Distributed Systems Engineer. Currently final-year Computer Science student at Ahmedabad University. Focuses on high-throughput backend infrastructure, consensus layers (Raft), and scalable APIs in Go and C++.`;
+          output.innerHTML = `Drumil Bhati — Backend & Distributed Systems Engineer. Final-year CS student at Ahmedabad University. Specialized in high-throughput backends, Raft consensus, 2D Quadtree spatial scheduling, and scalable APIs in Go and C++.`;
           break;
         case 'ls':
+        case 'ls .':
           output.innerHTML = `resume.txt   projects/   skills.json   infrastructure.yaml`;
+          break;
+        case 'ls projects':
+        case 'ls projects/':
+          output.innerHTML = `secureorder.log   swarm.log   tablingtime.conf   trafficlights.py`;
+          break;
+        case 'swarm':
+        case 'cat swarm':
+        case 'cat swarm.log':
+        case 'cat projects/swarm':
+        case 'cat projects/swarm.log':
+          output.innerHTML = 
+`<span style="color: var(--accent); font-weight: bold;">[PROJECT: Swarm - Resource-Aware Distributed Task Execution Engine]</span>
+Tech: Go / Docker SDK / 2D Spatial Quadtree / HTTP
+Description: Resource-aware task execution framework using 2D spatial quadtree indexing (O(log N) pruning) for capacity-based container matchmaking without OOM crashes.
+Metrics: 570µs E2E latency @ 1,000,000 tasks | 5.6x speedup (5 Coordinators)
+GitHub: <a href="https://github.com/drumilbhati/swarm" target="_blank" style="color: var(--accent); text-decoration: underline;">https://github.com/drumilbhati/swarm</a>`;
+          break;
+        case 'secureorder':
+        case 'cat secureorder':
+        case 'cat secureorder.log':
+        case 'cat projects/secureorder':
+        case 'cat projects/secureorder_seq.log':
+          output.innerHTML = 
+`<span style="color: var(--accent); font-weight: bold;">[PROJECT: SecureOrder - Blockchain MEV Protection Engine]</span>
+Tech: Go / C++ / Solidity / gRPC / Raft / AWS
+Description: Distributed transaction sequencer implementing a 5-node Raft consensus cluster on AWS to prevent MEV front-running attacks.
+Metrics: 3000+ RPS sustained | p99 < 12ms latency
+GitHub: <a href="https://github.com/drumilbhati/secureorder" target="_blank" style="color: var(--accent); text-decoration: underline;">https://github.com/drumilbhati/secureorder</a>`;
+          break;
+        case 'tablingtime':
+        case 'cat tablingtime':
+        case 'cat tablingtime.conf':
+        case 'cat projects/tablingtime':
+        case 'cat projects/tabling_time_solver.conf':
+          output.innerHTML = 
+`<span style="color: var(--accent); font-weight: bold;">[PROJECT: TablingTime Ecosystem - Greedy CSP Scheduler]</span>
+Tech: Node.js / Express / MongoDB
+Description: University course scheduling engine resolving timetable conflicts for 2000+ students and 180 courses.
+Metrics: Reduced planning time from 15 hours to < 3 minutes
+GitHub: <a href="https://github.com/drumilbhati/TablingTime-Frontend" target="_blank" style="color: var(--accent); text-decoration: underline;">https://github.com/drumilbhati/TablingTime-Frontend</a>`;
+          break;
+        case 'trafficlights':
+        case 'cat trafficlights':
+        case 'cat trafficlights.py':
+        case 'cat projects/trafficlights':
+        case 'cat projects/urban_traffic_sim.py':
+          output.innerHTML = 
+`<span style="color: var(--accent); font-weight: bold;">[PROJECT: Urban Traffic Light Scheduler - OSM Graph Optimizer]</span>
+Tech: Python / NetworkX / OpenStreetMap / SUMO
+Description: Dynamic city traffic simulator outperforming Backpressure models by optimizing phase cycle weights in real time.
+Metrics: +24% vehicle flow rate across 4 global cities
+GitHub: <a href="https://github.com/drumilbhati/ComplexNetwork" target="_blank" style="color: var(--accent); text-decoration: underline;">https://github.com/drumilbhati/ComplexNetwork</a>`;
+          break;
+        case 'cat skills.json':
+          output.innerHTML = `{\n  "languages": ["Go", "C++", "Java", "TypeScript", "SQL"],\n  "systems": ["Raft Consensus", "2D Spatial Quadtree", "gRPC", "Docker SDK", "TCP Sockets"],\n  "databases": ["Redis", "PostgreSQL", "MongoDB"]\n}`;
+          break;
+        case 'cat infrastructure.yaml':
+          output.innerHTML = `environment: production\ncoordinators:\n  - node_id: 1\n    port: 8081\n  - node_id: 2\n    port: 8082\nworkers:\n  - capacity: "dynamic_cgroup_headroom"\n    container_engine: "docker"`;
           break;
         case 'cat resume.txt':
           output.innerHTML = `Opening resume.pdf in a new tab...`;

@@ -443,6 +443,18 @@ h1, h2, h3, h4 {
   transition: var(--transition-smooth);
 }
 
+.project-desc {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-left: 2.2rem;
+  margin-top: 0.5rem;
+  line-height: 1.55;
+  font-weight: 350;
+  max-width: 92%;
+  transition: var(--transition-smooth);
+}
+
 /* Hover behaviors for project list (Desktop CSS trick) */
 .project-list:hover .project-item:not(:hover) {
   opacity: 0.35;
@@ -459,6 +471,10 @@ h1, h2, h3, h4 {
 
 .project-item:hover .project-tech {
   color: var(--accent);
+}
+
+.project-item:hover .project-desc {
+  color: var(--text-primary);
 }
 
 /* Mobile drawer default styling (hidden on desktop) */
