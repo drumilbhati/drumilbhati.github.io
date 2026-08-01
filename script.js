@@ -208,7 +208,7 @@ function initConsoleSimulator() {
       projectItems.forEach(pi => pi.classList.remove('active'));
       item.classList.add('active');
       currentActiveProject = projectId;
-      renderConsoleData(projectId);
+      renderConsoleData(projectId, true);
     });
   });
 
@@ -229,12 +229,13 @@ function initConsoleSimulator() {
   }
 }
 
-function renderConsoleData(projectId) {
-  if (currentlyShowingProject === projectId) return;
-  currentlyShowingProject = projectId;
+function renderConsoleData(projectId, force = false) {
+  if (currentlyShowingProject === projectId && !force) return;
 
   const data = projectData[projectId];
   if (!data) return;
+
+  currentlyShowingProject = projectId;
 
   // Clear any active log printing timeouts
   logTimeoutIds.forEach(id => clearTimeout(id));
