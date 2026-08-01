@@ -80,6 +80,34 @@ const projectData = {
       "metric.throughput: 3142 RPS | CPU: 42.1% | Mem: 1.2GB"
     ]
   },
+  swarm: {
+    title: "swarm_coordinator.log",
+    lang: "go",
+    stats: [
+      { label: "Engine Type", val: "Capacity-Aware Work Stealing" },
+      { label: "Spatial Index", val: "2D Spatial Quadtree (CPU x RAM)" },
+      { label: "Matchmaking RTT", val: "570µs @ 1M tasks (O(log N))", accent: true },
+      { label: "Horizontal Scale", val: "5.6x Speedup (5 Coordinators)" },
+      { label: "Sandboxing", val: "Docker SDK + Cgroups Limits" }
+    ],
+    diagram:
+`[Client] ──HTTP/gRPC──> [Coordinator Pool (Quadtree Index)]
+                                      │
+           ┌──────────────────────────┼──────────────────────────┐
+           ▼                          ▼                          ▼
+[Worker 01 (Docker Engine)]  [Worker 02 (Docker Engine)]  [Worker 03 (Docker Engine)]
+ (cgroup Sandboxed Task)      (Capacity Headroom Poll)    (Work Stealing Poller)`,
+    logs: [
+      "sys.init: quadtree spatial index initialized (CPU x RAM plane)",
+      "coordinator.pool: 5 coordinator nodes bound, listening on :8081",
+      "worker.telemetry: monitoring host cgroup capacity headroom",
+      "matchmaker.quadtree: spatial query for required (0.5 CPU, 52MB RAM)",
+      "matchmaker.dispatch: matched task python-math-pi in 48.2µs (K=50 nearest)",
+      "worker.executor: spinning up container python:3.9-alpine with cgroups",
+      "executor.stream: Real Pi value: 3.141592653589793",
+      "metric.cluster: 1,000,000 tasks queued | E2E latency: 571.9µs | 5.6x cluster speedup"
+    ]
+  },
   tablingtime: {
     title: "tabling_time_solver.conf",
     lang: "nodejs",

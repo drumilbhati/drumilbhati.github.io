@@ -48,6 +48,13 @@ I actively solve algorithmic challenges to benchmark my constraint logic and opt
 *   Implements a **Raft consensus cluster** (5-nodes) to enforce strict FIFO ordering.
 *   Sustains **3000+ RPS** with sub-12ms processing latencies.
 
+#### 🐝 [Swarm](https://github.com/drumilbhati/swarm) — Resource-Aware Distributed Task Execution Engine
+*   **Tech Stack:** Go / Docker / Spatial Quadtree / HTTP
+*   Engineered a lightweight, distributed task execution framework for containerized workloads across transient compute environments.
+*   Implements **Capacity-Aware Matchmaking** using a **2D Spatial Quadtree index** ($O(\log N)$ pruning), protecting nodes from Out-of-Memory (OOM) crashes.
+*   Achieves **570 µs E2E matchmaking latency** at **1,000,000 pending tasks** with zero worker density degradation.
+*   Scales horizontally with a **work-stealing multi-coordinator topology**, yielding a **5.6× speedup** across 5 coordinator nodes.
+
 #### 📅 [TablingTime Ecosystem](https://github.com/drumilbhati/TablingTime-Backend) — Greedy CSP Scheduler
 *   **Tech Stack:** Node.js / Express / MongoDB
 *   Re-engineered university course scheduling for **2000+ students and 180 courses**.
