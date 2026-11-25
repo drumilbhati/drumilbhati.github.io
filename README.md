@@ -61,10 +61,10 @@ I actively solve algorithmic challenges to benchmark my constraint logic and opt
 *   Utilizes a backtracking **Greedy Constraint-Satisfaction (CSP) algorithm** to resolve conflicts.
 *   Reduced scheduling time from **15 hours of manual work to under 3 minutes** of computation.
 
-#### 🚦 [Urban Traffic Simulator](https://github.com/drumilbhati/NetPack) - OSM Graph Optimizer
-*   **Tech Stack:** Python / NetworkX / OpenStreetMap / SUMO
-*   Created a dynamic road network traffic simulator that maps global cities using the OpenStreetMap API.
-*   Applied a backpressure flow algorithm to adjust traffic light phase configurations in real time, increasing baseline vehicle throughput by **24%**.
+#### 🧪 [Damascus](https://github.com/drumilbhati/damascus) - Distributed Load-Testing Control Plane
+*   **Tech Stack:** Go / TypeScript / Docker / Prometheus / Jaeger
+*   Maps service dependencies from OpenTelemetry/Jaeger trace data to identify critical services and run step load tests.
+*   Monitors live Prometheus metrics and automatically triggers an emergency stop on SLA breach while tracking capacity limits and recovery times.
 
 #### 🔌 [NetPack](https://github.com/drumilbhati/NetPack) - Network Packet Analyzer
 *   **Tech Stack:** Python
