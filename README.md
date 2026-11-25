@@ -42,35 +42,35 @@ I actively solve algorithmic challenges to benchmark my constraint logic and opt
 
 ### 🌟 Featured Systems & Projects
 
-#### ⚡ [SecureOrder](https://github.com/drumilbhati/secureorder) — Blockchain MEV Protection Engine
+#### ⚡ [SecureOrder](https://github.com/drumilbhati/secureorder) - Blockchain MEV Protection Engine
 *   **Tech Stack:** Go / C++ / Solidity / gRPC / Raft / AWS
 *   Designed and built a distributed transaction sequencer that mitigates Maximal Extractable Value (MEV) front-running attacks.
 *   Implements a **Raft consensus cluster** (5-nodes) to enforce strict FIFO ordering.
 *   Sustains **3000+ RPS** with sub-12ms processing latencies.
 
-#### 🐝 [Swarm](https://github.com/drumilbhati/swarm) — Resource-Aware Distributed Task Execution Engine
+#### 🐝 [Swarm](https://github.com/drumilbhati/swarm) - Resource-Aware Distributed Task Execution Engine
 *   **Tech Stack:** Go / Docker / Spatial Quadtree / HTTP
 *   Engineered a lightweight, distributed task execution framework for containerized workloads across transient compute environments.
 *   Implements **Capacity-Aware Matchmaking** using a **2D Spatial Quadtree index** ($O(\log N)$ pruning), protecting nodes from Out-of-Memory (OOM) crashes.
 *   Achieves **570 µs E2E matchmaking latency** at **1,000,000 pending tasks** with zero worker density degradation.
 *   Scales horizontally with a **work-stealing multi-coordinator topology**, yielding a **5.6× speedup** across 5 coordinator nodes.
 
-#### 📅 [TablingTime Ecosystem](https://github.com/drumilbhati/TablingTime-Backend) — Greedy CSP Scheduler
+#### 📅 [TablingTime Ecosystem](https://github.com/drumilbhati/TablingTime-Backend) - Greedy CSP Scheduler
 *   **Tech Stack:** Node.js / Express / MongoDB
 *   Re-engineered university course scheduling for **2000+ students and 180 courses**.
 *   Utilizes a backtracking **Greedy Constraint-Satisfaction (CSP) algorithm** to resolve conflicts.
 *   Reduced scheduling time from **15 hours of manual work to under 3 minutes** of computation.
 
-#### 🚦 [Urban Traffic Simulator](https://github.com/drumilbhati/NetPack) — OSM Graph Optimizer
+#### 🚦 [Urban Traffic Simulator](https://github.com/drumilbhati/NetPack) - OSM Graph Optimizer
 *   **Tech Stack:** Python / NetworkX / OpenStreetMap / SUMO
 *   Created a dynamic road network traffic simulator that maps global cities using the OpenStreetMap API.
 *   Applied a backpressure flow algorithm to adjust traffic light phase configurations in real time, increasing baseline vehicle throughput by **24%**.
 
-#### 🔌 [NetPack](https://github.com/drumilbhati/NetPack) — Network Packet Analyzer
+#### 🔌 [NetPack](https://github.com/drumilbhati/NetPack) - Network Packet Analyzer
 *   **Tech Stack:** Python
 *   A low-level system utility for capturing, parsing, and analyzing TCP/IP packets directly on network interfaces.
 
-#### 💾 [BackupDB](https://github.com/drumilbhati/BackupDB) — Database Backup Sync Tool
+#### 💾 [BackupDB](https://github.com/drumilbhati/BackupDB) - Database Backup Sync Tool
 *   **Tech Stack:** Go / Bash / Cron
 *   Automated incremental and full backup utility for MongoDB/PostgreSQL, compiling and sync-shipping backups to remote object storage with compression.
 
