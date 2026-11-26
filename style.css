@@ -1,12 +1,9 @@
 :root {
-    --ink: #ffffff;
-    --body: #e7e5e4;
-    --muted: #a8a29e;
-    --line: rgba(255, 255, 255, 0.12);
+    --ink: #e8e8e5;
+    --muted: #a3a49e;
+    --line: #3a3b38;
     --paper: #000000;
-    --surface: rgba(255, 255, 255, 0.06);
-    --accent: #60a5fa;
-    --accent-hover: #93c5fd
+    --accent: #c1c6a9
 }
 
 * {
@@ -14,21 +11,24 @@
 }
 
 html {
-    scroll-behavior: smooth;
-    overscroll-behavior: none
+    scroll-behavior: smooth
 }
 
 body {
     margin: 0;
     background: var(--paper);
-    color: var(--body);
-    font: 400 15px/1.625 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--ink);
+    font: 15px/1.75 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
     -webkit-font-smoothing: antialiased
 }
 
 a {
     color: inherit;
     text-decoration: none
+}
+
+a:hover {
+    color: var(--accent)
 }
 
 .site-header {
@@ -43,9 +43,9 @@ a {
 }
 
 .wordmark {
-    font-weight: 500;
-    font-size: 18px;
-    color: var(--ink)
+    font-weight: 700;
+    letter-spacing: -.08em;
+    font-size: 20px
 }
 
 .wordmark span {
@@ -55,27 +55,13 @@ a {
 nav {
     display: flex;
     gap: 28px;
+    color: var(--muted);
     font-size: 13px
 }
 
-nav a,
 .resume {
-    color: var(--body);
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: from-font;
-    opacity: .65;
-    transition: opacity .15s
-}
-
-nav a:hover,
-.resume:hover {
-    opacity: 1;
-    color: var(--body)
-}
-
-.resume {
-    font-size: 13px
+    font-size: 13px;
+    border-bottom: 1px solid #b8b9b2
 }
 
 main {
@@ -85,14 +71,14 @@ main {
 }
 
 .intro {
-    padding: 88px 0 72px;
+    padding: 105px 0 82px;
     border-bottom: 1px solid var(--line)
 }
 
 .eyebrow,
 .section-heading span {
     font-size: 11px;
-    letter-spacing: .08em;
+    letter-spacing: .12em;
     text-transform: uppercase;
     color: var(--muted)
 }
@@ -105,34 +91,28 @@ p {
 }
 
 .intro h1 {
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 1.25;
-    color: var(--ink);
-    margin: 14px 0
+    font: 500 clamp(34px, 5.5vw, 46px)/1.1 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: -.03em;
+    margin: 18px 0
 }
 
 .role {
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--muted);
-    max-width: 600px;
-    line-height: 1.625;
-    margin-bottom: 18px
+    font-size: 20px;
+    max-width: 560px;
+    line-height: 1.55;
+    margin-bottom: 20px
 }
 
 .bio {
-    color: var(--muted);
-    max-width: 650px
+    color: #b5b6b0;
+    max-width: 640px
 }
 
 .achievement {
     margin: 22px 0 0;
-    padding: 11px 14px;
-    background: var(--surface);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    color: var(--body);
+    padding: 12px 14px;
+    background: #2c2d2a;
+    color: #d4d5ce;
     font-size: 13px
 }
 
@@ -140,26 +120,17 @@ p {
     display: flex;
     gap: 24px;
     margin: 28px 0 0;
-    font-size: 13.5px
+    font-size: 13px
 }
 
 .links a,
 .project-title a,
 .contact a {
-    color: var(--accent);
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: from-font
-}
-
-.links a:hover,
-.project-title a:hover,
-.contact a:hover {
-    color: var(--accent-hover)
+    border-bottom: 1px solid #b8b9b2
 }
 
 .content-section {
-    padding: 56px 0 20px
+    padding: 62px 0 20px
 }
 
 .section-heading {
@@ -167,19 +138,17 @@ p {
     align-items: baseline;
     justify-content: space-between;
     border-bottom: 1px solid var(--line);
-    padding-bottom: 14px;
-    margin-bottom: 4px
+    padding-bottom: 15px;
+    margin-bottom: 5px
 }
 
 .section-heading h2 {
-    font-weight: 500;
-    font-size: 20px;
-    color: var(--ink);
+    font: 500 27px 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
     margin: 0
 }
 
 .project {
-    padding: 20px 0;
+    padding: 21px 0;
     border-bottom: 1px solid var(--line)
 }
 
@@ -192,22 +161,18 @@ p {
 
 .project-title h3 {
     font-size: 15px;
-    font-weight: 500;
-    color: var(--ink);
+    font-weight: 600;
     margin: 0
 }
 
-.project-title a {
-    font-size: 12.5px
-}
-
+.project-title a,
 .project-title span {
     font-size: 12px;
     color: var(--muted)
 }
 
 .project p {
-    color: var(--muted);
+    color: #b5b6b0;
     font-size: 14px;
     max-width: 650px;
     margin: 8px 0
@@ -216,8 +181,7 @@ p {
 .tags,
 .interests {
     color: var(--muted);
-    font-size: 12px;
-    opacity: .85
+    font-size: 12px
 }
 
 .compact {
@@ -237,9 +201,7 @@ p {
 }
 
 .contact h2 {
-    font-weight: 400;
-    font-size: 28px;
-    color: var(--ink);
+    font: 500 38px 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
     margin: 8px 0
 }
 
@@ -282,15 +244,15 @@ footer {
     }
 
     .intro {
-        padding: 68px 0 56px
+        padding: 78px 0 62px
     }
 
     .role {
-        font-size: 15px
+        font-size: 18px
     }
 
     .section-heading h2 {
-        font-size: 18px
+        font-size: 24px
     }
 
     .project-title {
@@ -342,7 +304,7 @@ footer {
 
 @media (max-width: 480px) {
     body {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .site-header {
@@ -361,15 +323,15 @@ footer {
     }
 
     .intro {
-        padding: 56px 0 44px;
+        padding: 66px 0 48px;
     }
 
     .intro h1 {
-        font-size: clamp(28px, 8vw, 36px);
+        font-size: clamp(30px, 8.5vw, 38px);
     }
 
     .role {
-        font-size: 15px;
+        font-size: 18px;
     }
 
     .links {
@@ -383,7 +345,7 @@ footer {
     }
 
     .section-heading h2 {
-        font-size: 18px;
+        font-size: 22px;
     }
 
     .section-heading span {

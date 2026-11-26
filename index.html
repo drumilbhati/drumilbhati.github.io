@@ -1,54 +1,147 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Drumil Bhati is a computer science student building backend and distributed systems.">
-  <title>Drumil Bhati - Systems Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Drumil Bhati is a computer science student building backend and distributed systems.">
+    <title>Drumil Bhati - Systems Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
-    <nav id="primary-navigation" aria-label="Page navigation">
-      <a href="#about">About</a><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#contact">Contact</a><a class="mobile-resume" href="https://drive.google.com/file/d/1IPMcJAx50Jo2XJaRMzm3qIi3LbqVGJyf/view?usp=sharing" target="_blank" rel="noreferrer">Resume ↗</a>
-    </nav>
-    <a class="resume" href="https://drive.google.com/file/d/1ruDyPcqKJRvIxyodvflMFzzl0UOGu8Ul/view?usp=drive_link" target="_blank" rel="noreferrer">Resume ↗</a>
-  </header>
-  <main id="top">
-    <section class="intro" id="about">
-      <p class="eyebrow">Computer science · Ahmedabad, India</p>
-      <h1>Drumil Bhati</h1>
-      <p class="role">I build reliable software for systems that need to move fast and stay available.</p>
-      <p class="bio">I’m a Computer Science student at Ahmedabad University interested in backend engineering, distributed systems, and performance. I enjoy taking a problem from its constraints through to a working system, whether that means coordinating nodes, scheduling workloads, or making an algorithm scale.</p>
-      <p class="achievement">Top-ranked student at my college with the highest GPA · ICPC regionalist · LeetCode top 3%</p>
-      <p class="links"><a href="https://github.com/drumilbhati" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/drumil-bhati/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="mailto:drumilbhati5@gmail.com">Email ↗</a></p>
-    </section>
-    <section id="work" class="content-section">
-      <div class="section-heading"><h2>Selected work</h2><span>Projects</span></div>
-      <article class="project"><div class="project-title"><h3>SecureOrder</h3><a href="https://github.com/drumilbhati/secureorder" target="_blank" rel="noreferrer">Source ↗</a></div><p>A distributed transaction sequencer designed to reduce front-running. A five-node Raft cluster enforces ordering, with a reported throughput of 3,000+ requests per second and p99 latency under 12 ms.</p><div class="tags">Go · C++ · Raft · gRPC · AWS</div></article>
-      <article class="project"><div class="project-title"><h3>Swarm</h3><a href="https://github.com/drumilbhati/swarm" target="_blank" rel="noreferrer">Source ↗</a></div><p>A resource-aware task execution engine that matches work to container capacity using a spatial quadtree. Benchmarks report 570 μs matchmaking latency at one million pending tasks.</p><div class="tags">Go · Docker · Distributed systems</div></article>
-      <article class="project"><div class="project-title"><h3>TablingTime</h3><a href="https://github.com/drumilbhati/TablingTime-Backend" target="_blank" rel="noreferrer">Source ↗</a></div><p>A course scheduling system for 2,000+ students and 180 courses. Constraint-based scheduling reduced timetable planning from hours of manual work to minutes.</p><div class="tags">Node.js · Express · MongoDB · CSP</div></article>
-      <article class="project"><div class="project-title"><h3>Damascus</h3><a href="https://github.com/drumilbhati/damascus" target="_blank" rel="noreferrer">Source ↗</a></div><p>A load-testing tool for multi-service apps. It finds key services from trace data, ramps up traffic in steps, watches latency, and stops the test right away if service limits break.</p><div class="tags">Go · TypeScript · Docker · Prometheus · Jaeger</div></article>
-    </section>
-    <section id="experience" class="content-section compact">
-      <div class="section-heading"><h2>Experience & education</h2><span>Background</span></div>
-      <article class="project"><div class="project-title"><h3>Teaching Assistant</h3><span>Ahmedabad University</span></div><p>Supported courses in Design and Analysis of Algorithms and Data Structures, mentoring students through lab sessions and office hours. Also served as Competitive Programming Head for the university programming club.</p></article>
-      <article class="project"><div class="project-title"><h3>Computer Science & Engineering</h3><span>Ahmedabad University</span></div><p>Final-year undergraduate focused on algorithms, systems, and software engineering.</p></article>
-    </section>
-    <section class="content-section compact skills-section">
-      <div class="section-heading"><h2>Skills &amp; interests</h2><span>What I work with</span></div>
-      <article class="project"><div class="project-title"><h3>Languages &amp; CS basics</h3><span>Core</span></div><p>C++, Go, Java, Python, TypeScript, JavaScript, Rust, SQL, and Verilog. Strong base in data structures, algorithms, operating systems, computer networks, and databases.</p></article>
-      <article class="project"><div class="project-title"><h3>Backend, web &amp; tools</h3><span>Software</span></div><p>Node.js, Express, React, Spring Boot, gRPC, PostgreSQL, MongoDB, Redis, Docker, Git, and Linux. Used to build APIs, database tools, and campus web apps.</p></article>
-      <article class="project"><div class="project-title"><h3>Hardware &amp; low-level work</h3><span>Engineering</span></div><p>Digital logic and state machines in Verilog, an Arduino Bluetooth car in C++, packet analysis in Python, and digital image processing coursework.</p></article>
-      <article class="project"><div class="project-title"><h3>Problem solving &amp; beyond</h3><span>Outside code</span></div><p>Solved 2,700+ coding problems across LeetCode, Codeforces, and CodeChef, and contributed to university projects with the Ahmedabad University Dev Team. Off screen, I play badminton and futsal.</p></article>
-    </section>
-    <section id="contact" class="contact"><p class="eyebrow">Have a good problem?</p><h2>Let’s talk.</h2><a href="mailto:drumilbhati5@gmail.com">drumilbhati5@gmail.com ↗</a></section>
-  </main>
-  <footer><span>© <span id="year"></span> Drumil Bhati</span></footer>
-  <script src="script.js"></script>
+    <header class="site-header">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+            aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+        <nav id="primary-navigation" aria-label="Page navigation">
+            <a href="#about">About</a><a href="#work">Selected work</a><a href="#experience">Experience</a><a
+                href="#contact">Contact</a><a class="mobile-resume"
+                href="https://drive.google.com/file/d/1IPMcJAx50Jo2XJaRMzm3qIi3LbqVGJyf/view?usp=sharing"
+                target="_blank" rel="noreferrer">Resume ↗</a>
+        </nav>
+        <a class="resume" href="https://drive.google.com/file/d/1ruDyPcqKJRvIxyodvflMFzzl0UOGu8Ul/view?usp=drive_link"
+            target="_blank" rel="noreferrer">Resume ↗</a>
+    </header>
+    <main id="top">
+        <section class="intro" id="about">
+            <p class="eyebrow">Computer science · Ahmedabad, India</p>
+            <h1>Drumil Bhati</h1>
+            <p class="role">I build reliable software for systems that need to move fast and stay available.</p>
+            <p class="bio">I’m a Computer Science student at Ahmedabad University interested in backend engineering,
+                distributed systems, and performance. I enjoy taking a problem from its constraints through to a working
+                system, whether that means coordinating nodes, scheduling workloads, or making an algorithm scale.</p>
+            <p class="achievement">Top-ranked student at my college with the highest GPA · ICPC regionalist · LeetCode
+                top 3%</p>
+            <p class="links"><a href="https://github.com/drumilbhati" target="_blank" rel="noreferrer">GitHub ↗</a><a
+                    href="https://www.linkedin.com/in/drumil-bhati/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a
+                    href="mailto:drumilbhati5@gmail.com">Email ↗</a></p>
+        </section>
+        <section id="work" class="content-section">
+            <div class="section-heading">
+                <h2>Selected work</h2><span>Projects</span>
+            </div>
+            <article class="project">
+                <div class="project-title">
+                    <h3>SecureOrder</h3><a href="https://github.com/drumilbhati/secureorder" target="_blank"
+                        rel="noreferrer">Source ↗</a>
+                </div>
+                <p>A distributed transaction sequencer designed to reduce front-running. A five-node Raft cluster
+                    enforces ordering, with a reported throughput of 3,000+ requests per second and p99 latency under 12
+                    ms.</p>
+                <div class="tags">Go · C++ · Raft · gRPC · AWS</div>
+            </article>
+            <article class="project">
+                <div class="project-title">
+                    <h3>Swarm</h3><a href="https://github.com/drumilbhati/swarm" target="_blank" rel="noreferrer">Source
+                        ↗</a>
+                </div>
+                <p>A resource-aware task execution engine that matches work to container capacity using a spatial
+                    quadtree. Benchmarks report 570 μs matchmaking latency at one million pending tasks.</p>
+                <div class="tags">Go · Docker · Distributed systems</div>
+            </article>
+            <article class="project">
+                <div class="project-title">
+                    <h3>TablingTime</h3><a href="https://github.com/drumilbhati/TablingTime-Backend" target="_blank"
+                        rel="noreferrer">Source ↗</a>
+                </div>
+                <p>A course scheduling system for 2,000+ students and 180 courses. Constraint-based scheduling reduced
+                    timetable planning from hours of manual work to minutes.</p>
+                <div class="tags">Node.js · Express · MongoDB · CSP</div>
+            </article>
+            <article class="project">
+                <div class="project-title">
+                    <h3>Damascus</h3><a href="https://github.com/drumilbhati/damascus" target="_blank"
+                        rel="noreferrer">Source ↗</a>
+                </div>
+                <p>A load-testing tool for multi-service apps. It finds key services from trace data, ramps up traffic
+                    in steps, watches latency, and stops the test right away if service limits break.</p>
+                <div class="tags">Go · TypeScript · Docker · Prometheus · Jaeger</div>
+            </article>
+        </section>
+        <section id="experience" class="content-section compact">
+            <div class="section-heading">
+                <h2>Experience & education</h2><span>Background</span>
+            </div>
+            <article class="project">
+                <div class="project-title">
+                    <h3>Teaching Assistant</h3><span>Ahmedabad University</span>
+                </div>
+                <p>Supported courses in Design and Analysis of Algorithms and Data Structures, mentoring students
+                    through lab sessions and office hours. Also served as Competitive Programming Head for the
+                    university programming club.</p>
+            </article>
+            <article class="project">
+                <div class="project-title">
+                    <h3>Computer Science & Engineering</h3><span>Ahmedabad University</span>
+                </div>
+                <p>Final-year undergraduate focused on algorithms, systems, and software engineering.</p>
+            </article>
+        </section>
+        <section class="content-section compact skills-section">
+            <div class="section-heading">
+                <h2>Skills &amp; interests</h2><span>What I work with</span>
+            </div>
+            <article class="project">
+                <div class="project-title">
+                    <h3>Languages &amp; CS basics</h3><span>Core</span>
+                </div>
+                <p>C++, Go, Java, Python, TypeScript, JavaScript, Rust, SQL, and Verilog. Strong base in data
+                    structures, algorithms, operating systems, computer networks, and databases.</p>
+            </article>
+            <article class="project">
+                <div class="project-title">
+                    <h3>Backend, web &amp; tools</h3><span>Software</span>
+                </div>
+                <p>Node.js, Express, React, Spring Boot, gRPC, PostgreSQL, MongoDB, Redis, Docker, Git, and Linux. Used
+                    to build APIs, database tools, and campus web apps.</p>
+            </article>
+            <article class="project">
+                <div class="project-title">
+                    <h3>Hardware &amp; low-level work</h3><span>Engineering</span>
+                </div>
+                <p>Digital logic and state machines in Verilog, an Arduino Bluetooth car in C++, packet analysis in
+                    Python, and digital image processing coursework.</p>
+            </article>
+            <article class="project">
+                <div class="project-title">
+                    <h3>Problem solving &amp; beyond</h3><span>Outside code</span>
+                </div>
+                <p>Solved 2,700+ coding problems across LeetCode, Codeforces, and CodeChef, and contributed to
+                    university projects with the Ahmedabad University Dev Team. Off screen, I play badminton and futsal.
+                </p>
+            </article>
+        </section>
+        <section id="contact" class="contact">
+            <p class="eyebrow">Have a good problem?</p>
+            <h2>Let’s talk.</h2><a href="mailto:drumilbhati5@gmail.com">drumilbhati5@gmail.com ↗</a>
+        </section>
+    </main>
+    <footer><span>© <span id="year"></span> Drumil Bhati</span></footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
